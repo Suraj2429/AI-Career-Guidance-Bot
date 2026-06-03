@@ -118,25 +118,34 @@ border-top:1px solid #e5e7eb;
 }
 
 .input-area input{
-flex:1;
-padding:14px;
-border:1px solid #d1d5db;
-border-radius:12px;
-font-size:16px;
-outline:none;
+    flex:1;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
 }
 
-.input-area input:focus
+.input-area input:focus{
+    border-color:#2563eb;
+}
 
 .input-area button{
-background:#2563eb;
-color:white;
-border:none;
-padding:14px 25px;
-border-radius:12px;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
+    background:#650404;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    min-width:100px;
+    transition:0.3s;
+}
+
+.input-area button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
 }
 
 @media(max-width:768px)
@@ -168,7 +177,6 @@ transition:0.3s;
 }
 
 }
-
 
 .admin-link{
     position:absolute;
