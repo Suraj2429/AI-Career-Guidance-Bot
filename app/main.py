@@ -3,7 +3,8 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
-
+from fastapi import Form
+from fastapi.responses import RedirectResponse
 from .database import engine, SessionLocal
 from .models import Base, Lead, ChatLog, FAQ
 from .ai_service import get_ai_response
@@ -12,12 +13,44 @@ from .session_manager import conversation_state
 
 Base.metadata.create_all(bind=engine)
 
+ADMIN_USERNAME = "admin"
+ADMIN_PASSWORD = "admin123"
+
 app=FastAPI(
     title="Career Guidance Bot"
 )
 
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/templates")
+
+@app.get("/login", response_class=HTMLResponse)
+def login_page(request: Request):
+
+    return templates.TemplateResponse(
+        request=request,
+        name="login.html"
+    )
+
+@app.post("/admin-login")
+def admin_login(
+    username: str = Form(...),
+    password: str = Form(...)
+):
+
+    if (
+        username == ADMIN_USERNAME
+        and
+        password == ADMIN_PASSWORD
+    ):
+
+        return RedirectResponse(
+            url="/admin",
+            status_code=302
+        )
+
+    return {
+        "message": "Invalid Username or Password"
+    }
 
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
@@ -245,7 +278,7 @@ def analytics():
     }
 
 @app.get("/admin", response_class=HTMLResponse)
-def admin():
+def admin_dashboard():
 
     db = SessionLocal()
 

@@ -28,6 +28,7 @@ padding:22px;
 font-size:34px;
 font-weight:700;
 letter-spacing:0.5px;
+position: relative;
 }
 
 .domain-section{
@@ -166,4 +167,15 @@ transition:0.3s;
     max-width:90%;
 }
 
+}
+
+
+.admin-link{
+    position:absolute;
+    right:30px;
+    top:25px;
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
 }
