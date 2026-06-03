@@ -1,8 +1,6 @@
 career_recommendations = {
 
 "python_beginner": """
-```
-
 Python Internship Roadmap
 
 1. Python Basics
@@ -22,8 +20,6 @@ Duration: 3-4 Months
 """,
 
 "python_intermediate": """
-```
-
 Python Internship Roadmap
 
 1. Advanced Python
@@ -43,8 +39,6 @@ Duration: 2-3 Months
 """,
 
 "python_advanced": """
-```
-
 Python Internship Roadmap
 
 1. System Design
@@ -64,8 +58,6 @@ Duration: 2 Months
 """,
 
 "java": """
-```
-
 Java Developer Roadmap
 
 1. Core Java
@@ -85,8 +77,6 @@ Duration: 4 Months
 """,
 
 "data_analytics": """
-```
-
 Data Analytics Roadmap
 
 1. Excel
@@ -105,8 +95,6 @@ Duration: 3 Months
 """,
 
 "web_development": """
-```
-
 Web Development Roadmap
 
 1. HTML
@@ -126,8 +114,6 @@ Duration: 4 Months
 
 
 "no_coding": """
-```
-
 Non-Coding IT Careers
 
 1. Business Analyst
