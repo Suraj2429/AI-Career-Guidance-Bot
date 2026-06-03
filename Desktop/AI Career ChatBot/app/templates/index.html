@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>AI Career Guidance Bot</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+    AI Career Guidance Assistant
+</div>
+
+<div class="domain-section">
+
+    <div class="domain-title">
+        Select Your Interested Internship Domain
+    </div>
+
+    <div class="quick-actions">
+
+        <button onclick="sendPreset('Python')">
+            Python
+        </button>
+
+        <button onclick="sendPreset('Java')">
+            Java
+        </button>
+
+        <button onclick="sendPreset('Data Analytics')">
+            Data Analytics
+        </button>
+
+        <button onclick="sendPreset('Web Development')">
+            Web Development
+        </button>
+
+    </div>
+
+</div>
+
+<div id="chat-box" class="chat-box">
+
+    <div class="bot-message">
+        Welcome to AI Career Guidance Assistant
+        <br>
+        ## Choose a domain above to get a personalized internship roadmap.
+        <br>
+        # You can also ask:
+        <br>• What is Java?
+        <br>• How to become a Java Developer?
+        <br>• Data Analytics Career Path
+        <br>• Web Development Roadmap
+
+        </div>
+
+</div>
+
+<div id="typing" class="typing hidden">
+    Bot is typing...
+</div>
+
+<div class="input-area">
+
+    <input
+        type="text"
+        id="user-input"
+        placeholder="Type your message..."
+    >
+
+    <button onclick="sendMessage()">
+        Send
+    </button>
+
+</div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
